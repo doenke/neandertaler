@@ -165,6 +165,35 @@ jobs:
             "/"|""|".") echo "::error::SFTP_REMOTE_DIR darf nicht das Wurzelverzeichnis sein."; exit 1 ;;
           esac
 
+          # Bei einem Port ungleich 22 sucht ssh nur nach Zeilen, die mit
+          # "[host]:port" beginnen. Ein ssh-keyscan ohne -p liefert aber "host …".
+          # Solche Zeilen für genau diesen Host um den Port ergänzen – gleicher
+          # Schlüssel, gleicher Host, nur die Schreibweise.
+          KH="$HOME/.ssh/known_hosts"
+          if [ "$SFTP_PORT" != "22" ]; then
+            awk -v h="$SFTP_HOST" -v hp="[$SFTP_HOST]:$SFTP_PORT" '
+              { print }
+              $1 == h { $1 = hp; print }
+            ' "$KH" > "$KH.new" && mv "$KH.new" "$KH"
+            chmod 600 "$KH"
+          fi
+          LOOKUP="$SFTP_HOST"
+          [ "$SFTP_PORT" != "22" ] && LOOKUP="[$SFTP_HOST]:$SFTP_PORT"
+          if ! ssh-keygen -F "$LOOKUP" -f "$KH" > /dev/null; then
+            echo "::error::SFTP_KNOWN_HOSTS enthält keinen Eintrag für $LOOKUP."
+            echo "Einträge im Secret (Host-Spalte):"
+            grep -E '^[^#[:space:]]' "$KH" | awk '{print "  " $1 "  " $2}' | sort -u
+            echo "Der Server bietet an (Fingerabdrücke):"
+            ssh-keyscan -p "$SFTP_PORT" "$SFTP_HOST" 2>/dev/null | ssh-keygen -lf - | sed 's/^/  /' || true
+            echo "::error::Workflow mit 'Nur die Hostschlüssel ausgeben' starten und die Zeilen neu ins Secret kopieren."
+            exit 1
+          fi
+          # Passt der Host, aber nicht der Schlüssel, hilft ein Vergleich der Fingerabdrücke.
+          echo "Fingerabdrücke im Secret für $LOOKUP:"
+          ssh-keygen -F "$LOOKUP" -f "$KH" | grep -v '^#' | ssh-keygen -lf - | sed 's/^/  /' || true
+          echo "Fingerabdrücke, die der Server anbietet:"
+          ssh-keyscan -p "$SFTP_PORT" "$SFTP_HOST" 2>/dev/null | ssh-keygen -lf - | sed 's/^/  /' || true
+
           # Der Benutzername gehört an ssh, nicht an lftp: bei "open -u user URL"
           # ohne Passwort verwirft lftp den Namen und meldet sich anonym an –
           # ssh verbindet dann als der Runner-Benutzer und scheitert.

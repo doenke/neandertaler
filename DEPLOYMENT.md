@@ -53,6 +53,11 @@ ob überhaupt eine Schlüsselzeile enthalten ist.
 
 Bei einem abweichenden Port muss die Zeile mit `[host]:port` beginnen – genau
 so, wie `ssh-keyscan -p` es ausgibt.
+Fehlt das bei einem manuell gescannten Schlüssel (`ssh-keyscan` ohne `-p`),
+ergänzt der Workflow die Schreibweise für genau diesen Host selbst. Findet ssh
+trotzdem keinen passenden Eintrag, bricht der Workflow vor dem Upload ab und
+zeigt, welche Hosts im Secret stehen und welche Fingerabdrücke der Server
+anbietet.
 
 ## Erster Lauf
 
