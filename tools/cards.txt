@@ -1,0 +1,685 @@
+# Kartenliste für „Neandertaler“
+#
+# Eine Karte pro Zeile: 1-Punkt-Wort | 3-Punkt-Begriff
+# "## Kategorie" beginnt eine neue Kategorie.
+# Zeilen mit # sind Kommentare.
+#
+# Nach dem Bearbeiten:  python3 tools/build-cards.py
+# Das Skript prüft auf Dubletten und schreibt data/cards.de.json.
+# Die IDs werden aus dem Text gebildet: eine Karte behält ihre ID, solange
+# ihr Wortlaut gleich bleibt – so merkt sich die App, was schon gespielt wurde.
+
+## Essen & Trinken
+Fisch | Fischstäbchen
+Brot | Butterbrot
+Apfel | Apfelstrudel
+Käse | Käsefondue
+Kuchen | Geburtstagskuchen
+Suppe | Kartoffelsuppe
+Nudel | Nudelsalat
+Ei | Spiegelei
+Wurst | Currywurst
+Milch | Milchshake
+Tee | Pfefferminztee
+Kaffee | Kaffeeklatsch
+Bier | Biergarten
+Wein | Weinprobe
+Salz | Salzstange
+Zucker | Zuckerwatte
+Honig | Honigkuchenpferd
+Pizza | Pizzabote
+Reis | Milchreis
+Eis | Eisbecher
+Keks | Glückskeks
+Senf | Senfgurke
+Zwiebel | Zwiebelringe
+Bohne | Kaffeebohne
+Kartoffel | Kartoffelpuffer
+Tomate | Tomatenmark
+Gurke | Gewürzgurke
+Karotte | Karottenkuchen
+Banane | Bananensplit
+Zitrone | Zitronenlimonade
+Erdbeere | Erdbeermarmelade
+Kirsche | Kirschkern
+Birne | Birnenkompott
+Nuss | Nussknacker
+Schokolade | Schokoladenfondue
+Pfannkuchen | Pfannkuchenturm
+Brezel | Laugenbrezel
+Salat | Obstsalat
+Burger | Veggie-Burger
+Pommes | Pommesbude
+Döner | Dönerspieß
+Sushi | Sushi-Restaurant
+Knödel | Semmelknödel
+Schnitzel | Wiener Schnitzel
+Soße | Tomatensoße
+Popcorn | Popcornmaschine
+Chips | Kartoffelchips
+Saft | Orangensaft
+Wasser | Mineralwasser
+Sekt | Sektfrühstück
+Toast | Toastbrot
+Müsli | Müsliriegel
+Joghurt | Fruchtjoghurt
+Quark | Kräuterquark
+Pilz | Fliegenpilz
+Kürbis | Kürbissuppe
+Spargel | Spargelzeit
+Grill | Grillparty
+Braten | Sonntagsbraten
+Torte | Hochzeitstorte
+Plätzchen | Weihnachtsplätzchen
+Lolli | Dauerlutscher
+Kaugummi | Kaugummiblase
+Marmelade | Marmeladenglas
+Essig | Essiggurke
+Pfeffer | Pfefferkuchen
+Knoblauch | Knoblauchbrot
+Lachs | Räucherlachs
+Hähnchen | Brathähnchen
+Speck | Speckwürfel
+
+## Tiere
+Hund | Hundehütte
+Katze | Katzenklo
+Maus | Mausefalle
+Pferd | Schaukelpferd
+Kuh | Kuhglocke
+Schwein | Sparschwein
+Schaf | Schafherde
+Ziege | Ziegenkäse
+Huhn | Hühnerstall
+Ente | Quietscheente
+Gans | Gänsehaut
+Bär | Teddybär
+Wolf | Werwolf
+Fuchs | Fuchsbau
+Hase | Osterhase
+Igel | Igelfrisur
+Biene | Bienenstock
+Ameise | Ameisenhaufen
+Spinne | Spinnennetz
+Schnecke | Schneckenhaus
+Frosch | Froschkönig
+Vogel | Vogelnest
+Adler | Adlerauge
+Eule | Nachteule
+Hai | Haifischflosse
+Wal | Walfang
+Delfin | Delfinshow
+Krake | Tintenfisch
+Krebs | Einsiedlerkrebs
+Löwe | Löwenzahn
+Tiger | Tigerente
+Elefant | Elefantenrüssel
+Affe | Affenzirkus
+Giraffe | Giraffenhals
+Zebra | Zebrastreifen
+Kamel | Kamelhöcker
+Pinguin | Kaiserpinguin
+Eisbär | Eisbärbaby
+Schlange | Klapperschlange
+Krokodil | Krokodilstränen
+Schildkröte | Schildkrötenpanzer
+Fledermaus | Fledermausflügel
+Käfer | Marienkäfer
+Floh | Flohmarkt
+Mücke | Mückenstich
+Hummel | Hummelflug
+Wurm | Bücherwurm
+Raupe | Raupe Nimmersatt
+Schmetterling | Schmetterlinge im Bauch
+Storch | Klapperstorch
+Papagei | Papageienkrankheit
+Kuckuck | Kuckucksuhr
+Taube | Brieftaube
+Hamster | Hamsterkauf
+Dino | Dinosaurierknochen
+Mammut | Mammutaufgabe
+Esel | Eselsbrücke
+Ochse | Ochsenschwanzsuppe
+Hirsch | Hirschgeweih
+Reh | Rehkitz
+Wildschwein | Wildschweinbraten
+Robbe | Seehund
+Qualle | Feuerqualle
+Muschel | Miesmuschel
+Kröte | Die Kröte schlucken
+
+## Natur & Wetter
+Baum | Baumhaus
+Blume | Blumenstrauß
+Gras | Grashüpfer
+Blatt | Kleeblatt
+Wald | Waldbrand
+Berg | Bergsteiger
+Fluss | Flussufer
+See | Seerose
+Meer | Meerjungfrau
+Strand | Strandkorb
+Insel | Schatzinsel
+Stein | Steinzeit
+Sand | Sandburg
+Sonne | Sonnenbrand
+Mond | Mondlandung
+Stern | Sternschnuppe
+Himmel | Himmelbett
+Wolke | Wolkenkratzer
+Regen | Regenbogen
+Schnee | Schneemann
+Eis | Eiszeit
+Wind | Windmühle
+Sturm | Sturmflut
+Blitz | Blitzableiter
+Donner | Donnerwetter
+Nebel | Nebelhorn
+Feuer | Lagerfeuer
+Erde | Erdbeben
+Vulkan | Vulkanausbruch
+Höhle | Tropfsteinhöhle
+Wüste | Wüstensand
+Rose | Rosenkrieg
+Tanne | Tannenzapfen
+Eiche | Eichhörnchen
+Pilz | Pilzsuppe
+Kaktus | Kaktusblüte
+Moos | Moosgummi
+Welle | Wellenreiten
+Tal | Talsperre
+Quelle | Quellwasser
+Gletscher | Gletscherspalte
+Frühling | Frühlingsgefühle
+Sommer | Sommerferien
+Herbst | Herbstlaub
+Winter | Winterschlaf
+Tau | Morgentau
+Hagel | Hagelkorn
+Planet | Planetensystem
+Komet | Kometenschweif
+Samen | Samenkorn
+Wurzel | Quadratwurzel
+Ast | Astloch
+Zweig | Auf keinen grünen Zweig kommen
+Kiesel | Kieselstein
+
+## Zuhause & Haushalt
+Haus | Hausschuh
+Tür | Türklingel
+Fenster | Fensterbank
+Dach | Dachboden
+Wand | Wandtattoo
+Bett | Etagenbett
+Tisch | Küchentisch
+Stuhl | Schaukelstuhl
+Sofa | Sofakissen
+Lampe | Taschenlampe
+Kerze | Kerzenständer
+Uhr | Wecker
+Spiegel | Spiegelbild
+Bad | Badewanne
+Dusche | Duschvorhang
+Klo | Klopapier
+Seife | Seifenblase
+Kamm | Hahnenkamm
+Bürste | Zahnbürste
+Handtuch | Strandtuch
+Topf | Kochtopf
+Pfanne | Bratpfanne
+Löffel | Suppenlöffel
+Gabel | Mistgabel
+Messer | Taschenmesser
+Teller | Suppenteller
+Tasse | Kaffeetasse
+Glas | Weinglas
+Flasche | Flaschenpost
+Kühlschrank | Kühlschrankmagnet
+Ofen | Kachelofen
+Besen | Hexenbesen
+Eimer | Putzeimer
+Staub | Staubsauger
+Müll | Mülltonne
+Schlüssel | Schlüsselbund
+Schloss | Vorhängeschloss
+Treppe | Wendeltreppe
+Keller | Kellerassel
+Garten | Gartenzwerg
+Zaun | Gartenzaun
+Kissen | Kopfkissen
+Decke | Kuscheldecke
+Teppich | Fliegender Teppich
+Vorhang | Theatervorhang
+Regal | Bücherregal
+Schrank | Kleiderschrank
+Kiste | Schatzkiste
+Korb | Wäschekorb
+Wäsche | Waschmaschine
+Bügel | Bügeleisen
+Nadel | Stecknadel
+Faden | Roter Faden
+Schere | Papierschere
+Kleber | Sekundenkleber
+Hammer | Vorschlaghammer
+Nagel | Nagellack
+Leiter | Feuerleiter
+Kamin | Kaminfeuer
+Heizung | Fußbodenheizung
+
+## Körper & Gesundheit
+Kopf | Kopfschmerzen
+Haar | Haarspray
+Auge | Augenbraue
+Ohr | Ohrwurm
+Nase | Nasenbluten
+Mund | Mundharmonika
+Zahn | Zahnfee
+Zunge | Zungenbrecher
+Hals | Halsschmerzen
+Hand | Handschuh
+Finger | Fingerhut
+Daumen | Daumenkino
+Arm | Armbanduhr
+Bein | Beinbruch
+Fuß | Fußball
+Knie | Kniescheibe
+Bauch | Bauchnabel
+Rücken | Rückenwind
+Herz | Herzklopfen
+Blut | Blutspende
+Knochen | Knochenbruch
+Haut | Sonnencreme
+Bart | Weihnachtsmann
+Nagel | Fingernagel
+Husten | Hustensaft
+Schnupfen | Schnupfnase
+Fieber | Fieberthermometer
+Pflaster | Kopfsteinpflaster
+Arzt | Zahnarzt
+Pille | Pillendose
+Schlaf | Schlafwandler
+Traum | Traumfänger
+Brille | Sonnenbrille
+Muskel | Muskelkater
+Schweiß | Angstschweiß
+Träne | Freudentränen
+Lachen | Lachkrampf
+Gähnen | Gähnende Langeweile
+Niesen | Niespulver
+Schnarchen | Schnarchnase
+
+## Berufe & Menschen
+Koch | Sternekoch
+Bäcker | Bäckerei
+Arzt | Tierarzt
+Lehrer | Lehrerzimmer
+Polizei | Polizeiauto
+Feuerwehr | Feuerwehrmann
+Pilot | Autopilot
+Bauer | Bauernhof
+Fischer | Fischerboot
+Maler | Malerpinsel
+Friseur | Friseursalon
+Clown | Klassenclown
+Zauberer | Zaubertrick
+König | Königskrone
+Prinz | Prinzessin auf der Erbse
+Ritter | Ritterrüstung
+Pirat | Piratenschiff
+Hexe | Hexenhaus
+Riese | Riesenrad
+Zwerg | Sieben Zwerge
+Räuber | Räuberhauptmann
+Dieb | Taschendieb
+Richter | Schiedsrichter
+Chef | Chefkoch
+Baby | Babyflasche
+Oma | Omas Apfelkuchen
+Opa | Opas Werkstatt
+Mutter | Muttertag
+Vater | Vatertag
+Kind | Kindergarten
+Freund | Brieffreund
+Nachbar | Nachbarschaft
+Gast | Gastgeber
+Held | Superheld
+Spion | Geheimagent
+Astronaut | Raumstation
+Taucher | Tiefseetaucher
+Förster | Försterei
+Postbote | Briefträger
+Kellner | Trinkgeld
+Sänger | Opernsänger
+Tänzer | Balletttänzer
+Schneider | Schneiderpuppe
+Schmied | Hufschmied
+Mönch | Mönchskutte
+Nonne | Nonnenkloster
+Kapitän | Kapitänsmütze
+Detektiv | Sherlock Holmes
+
+## Sport & Freizeit
+Ball | Ballkleid
+Tor | Torwart
+Lauf | Marathon
+Rad | Fahrrad
+Ski | Skilift
+Schwimmen | Schwimmbad
+Tennis | Tennisschläger
+Golf | Golfplatz
+Boxen | Boxhandschuh
+Ring | Boxring
+Seil | Seilspringen
+Netz | Volleyball
+Korb | Basketball
+Schlitten | Schlittenfahrt
+Kegel | Kegelbahn
+Würfel | Würfelspiel
+Karte | Kartenspiel
+Puzzle | Puzzleteil
+Schach | Schachmatt
+Spiel | Spielplatz
+Rutsche | Wasserrutsche
+Schaukel | Hängematte
+Zelt | Zeltlager
+Angel | Angelhaken
+Jagd | Schnitzeljagd
+Pokal | Siegerpokal
+Medaille | Goldmedaille
+Trikot | Trikottausch
+Pfeife | Trillerpfeife
+Sprung | Weitsprung
+Rennen | Autorennen
+Surfen | Windsurfen
+Tauchen | Tauchermaske
+Klettern | Kletterwand
+Wandern | Wanderschuh
+Reiten | Ponyhof
+Yoga | Yogamatte
+Kino | Kinokarte
+Party | Überraschungsparty
+Tanz | Tanzschule
+Drachen | Drachensteigen
+Fangen | Fangen spielen
+Verstecken | Versteckspiel
+Murmel | Murmelbahn
+Lego | Legostein
+Puppe | Puppenhaus
+Kreisel | Brummkreisel
+
+## Verkehr & Reisen
+Auto | Autobahn
+Bus | Busfahrer
+Zug | Zugverspätung
+Schiff | Kreuzfahrtschiff
+Boot | Ruderboot
+Flugzeug | Papierflieger
+Rakete | Raketenstart
+Fahrrad | Fahrradhelm
+Straße | Straßenbahn
+Brücke | Hängebrücke
+Ampel | Ampelmännchen
+Tunnel | Tunnelblick
+Tank | Tankstelle
+Reifen | Reifenpanne
+Karte | Landkarte
+Koffer | Kofferraum
+Pass | Reisepass
+Hotel | Hotelzimmer
+Urlaub | Urlaubsfoto
+Hafen | Hafenrundfahrt
+Stau | Staumelder
+Taxi | Taxistand
+Motor | Motorrad
+Anker | Rettungsanker
+Segel | Segelboot
+Kompass | Kompassnadel
+Hubschrauber | Rettungshubschrauber
+Ticket | Fahrkarte
+Gleis | Gleis neundreiviertel
+Weg | Holzweg
+Stopp | Stoppschild
+Hupe | Lichthupe
+Lenkrad | Lenkradschloss
+Schlauch | Schlauchboot
+
+## Orte & Gebäude
+Stadt | Großstadt
+Dorf | Dorffest
+Schule | Schulhof
+Kirche | Kirchturm
+Burg | Burggraben
+Turm | Eiffelturm
+Markt | Supermarkt
+Laden | Tante-Emma-Laden
+Bank | Parkbank
+Park | Freizeitpark
+Zoo | Streichelzoo
+Bahnhof | Hauptbahnhof
+Kino | Autokino
+Museum | Naturkundemuseum
+Zirkus | Zirkuszelt
+Hütte | Almhütte
+Stall | Pferdestall
+Mühle | Mühlrad
+Brunnen | Wunschbrunnen
+Platz | Marktplatz
+Knast | Gefängnisausbruch
+Rathaus | Rathausplatz
+Kneipe | Kneipenquiz
+Palast | Königspalast
+Insel | Einsame Insel
+Berlin | Brandenburger Tor
+Paris | Mona Lisa
+Rom | Kolosseum
+Ägypten | Pyramiden
+Mond | Mann im Mond
+Mars | Marsmännchen
+Amerika | Freiheitsstatue
+Italien | Schiefer Turm von Pisa
+Alpen | Zugspitze
+Nordpol | Polarlicht
+
+## Technik & Dinge
+Handy | Handyhülle
+Computer | Computermaus
+Radio | Radiowecker
+Fernseher | Fernbedienung
+Kamera | Kameramann
+Foto | Fotoalbum
+Batterie | Batterieladegerät
+Kabel | Kabelsalat
+Strom | Stromausfall
+Licht | Lichtschalter
+Birne | Glühbirne
+Roboter | Rasenmäherroboter
+Rad | Hamsterrad
+Maschine | Zeitmaschine
+Knopf | Knopfdruck
+Brief | Liebesbrief
+Buch | Kochbuch
+Zeitung | Tageszeitung
+Stift | Bleistift
+Papier | Papierkorb
+Farbe | Wasserfarbe
+Pinsel | Pinselstrich
+Tasche | Handtasche
+Geld | Geldbeutel
+Münze | Glücksmünze
+Ring | Ehering
+Kette | Halskette
+Krone | Zahnkrone
+Schirm | Regenschirm
+Ballon | Heißluftballon
+Glocke | Kirchenglocke
+Trommel | Trommelwirbel
+Geige | Erste Geige
+Gitarre | Luftgitarre
+Klavier | Klavierlehrer
+Flöte | Blockflöte
+Mikrofon | Karaoke
+Magnet | Magnetfeld
+Lupe | Vergrößerungsglas
+Waage | Personenwaage
+Kran | Baukran
+Bagger | Baggersee
+Laser | Laserschwert
+Drohne | Drohnenflug
+Schwert | Schwertfisch
+Schild | Verkehrsschild
+Pfeil | Pfeil und Bogen
+Keule | Neandertaler
+Rad | Das Rad neu erfinden
+
+## Kleidung
+Hut | Zylinderhut
+Mütze | Zipfelmütze
+Schuh | Schuhkarton
+Stiefel | Gummistiefel
+Socke | Sockenschuss
+Hose | Hosentasche
+Hemd | Nachthemd
+Kleid | Brautkleid
+Rock | Minirock
+Jacke | Lederjacke
+Mantel | Regenmantel
+Schal | Fanschal
+Gürtel | Sicherheitsgurt
+Knopf | Knopfloch
+Kragen | Kragenweite
+Tasche | Rucksack
+Brille | Taucherbrille
+Maske | Karnevalsmaske
+Anzug | Taucheranzug
+Pulli | Weihnachtspullover
+Kappe | Tarnkappe
+Schleife | Fliege
+Helm | Bauarbeiterhelm
+Handschuh | Fäustling
+Schürze | Kochschürze
+Pyjama | Pyjamaparty
+Bikini | Bikinifigur
+Umhang | Superheldenumhang
+
+## Feste & Kultur
+Geburtstag | Geburtstagsständchen
+Weihnachten | Weihnachtsbaum
+Ostern | Ostereier
+Karneval | Rosenmontag
+Hochzeit | Hochzeitsreise
+Silvester | Feuerwerk
+Geschenk | Geschenkpapier
+Kerze | Adventskranz
+Nikolaus | Nikolausstiefel
+Engel | Schutzengel
+Teufel | Teufelskreis
+Geist | Gespensterschloss
+Märchen | Rotkäppchen
+Drache | Drachentöter
+Einhorn | Einhornkuchen
+Vampir | Graf Dracula
+Zombie | Zombiefilm
+Film | Stummfilm
+Lied | Schlaflied
+Musik | Musikschule
+Theater | Kasperletheater
+Bild | Bilderrahmen
+Oper | Seifenoper
+Witz | Witzbold
+Zauber | Zauberstab
+Schatz | Schatzkarte
+Krone | Dornröschen
+Spiegel | Spieglein an der Wand
+Apfel | Schneewittchen
+Glas | Aschenputtel
+Bohne | Bohnenranke
+Haar | Rapunzel
+Wolf | Rotkäppchen und der Wolf
+Brot | Hänsel und Gretel
+Mumie | Pyramide
+Tor | Oktoberfest
+Fest | Volksfest
+Ball | Maskenball
+Kuss | Kussmund
+Herz | Herzschmerz
+Liebe | Liebe auf den ersten Blick
+
+## Schule & Arbeit
+Buch | Schulbuch
+Heft | Hausaufgabenheft
+Tafel | Schultafel
+Kreide | Straßenkreide
+Pause | Pausenbrot
+Test | Vokabeltest
+Note | Zeugnis
+Ferien | Ferienlager
+Klasse | Klassenfahrt
+Rechnen | Taschenrechner
+Lesen | Leseratte
+Schreiben | Schreibmaschine
+Büro | Großraumbüro
+Chef | Chefetage
+Geld | Gehaltserhöhung
+Arbeit | Hausarbeit
+Plan | Stundenplan
+Uhr | Stechuhr
+Stempel | Poststempel
+Mappe | Schultasche
+Linie | Lineal
+Kreis | Zirkel
+Zahl | Glückszahl
+Wort | Wörterbuch
+Frage | Fragezeichen
+Punkt | Schlusspunkt
+
+## Redewendungen
+Katze | Die Katze im Sack kaufen
+Hund | Da liegt der Hund begraben
+Tomate | Tomaten auf den Augen
+Wurst | Das ist mir Wurst
+Butter | Alles in Butter
+Bohne | Nicht die Bohne
+Kuchen | Ein Stück vom Kuchen
+Senf | Seinen Senf dazugeben
+Käse | Das ist doch Käse
+Nagel | Den Nagel auf den Kopf treffen
+Ohr | Jemanden übers Ohr hauen
+Bein | Jemandem ein Bein stellen
+Hand | Hand aufs Herz
+Kopf | Den Kopf in den Sand stecken
+Nase | Die Nase voll haben
+Zahn | Jemandem auf den Zahn fühlen
+Daumen | Daumen drücken
+Haar | Haare auf den Zähnen
+Auge | Ein Auge zudrücken
+Fisch | Weder Fisch noch Fleisch
+Schwein | Schwein gehabt
+Pferd | Aufs falsche Pferd setzen
+Affe | Mich laust der Affe
+Fliege | Zwei Fliegen mit einer Klappe
+Eule | Eulen nach Athen tragen
+Hase | Da liegt der Hase im Pfeffer
+Spatz | Den Spatz in der Hand
+Elefant | Wie ein Elefant im Porzellanladen
+Tee | Abwarten und Tee trinken
+Wasser | Bis dahin fließt noch viel Wasser
+Feuer | Feuer und Flamme
+Eis | Das Eis brechen
+Wolke | Auf Wolke sieben
+Mond | Hinter dem Mond leben
+Stein | Stein vom Herzen
+Rom | Viele Wege führen nach Rom
+Glas | Zu tief ins Glas schauen
+Löffel | Den Löffel abgeben
+Topf | Jeder Topf findet seinen Deckel
+Faden | Den Faden verlieren
+Brücke | Alle Brücken abbrechen
+Zug | Der Zug ist abgefahren
+Bahnhof | Ich verstehe nur Bahnhof
+Luft | Luftschlösser bauen
+Holz | Auf dem Holzweg sein
+Kirche | Die Kirche im Dorf lassen
+Tisch | Reinen Tisch machen
+Teufel | Den Teufel an die Wand malen
+Himmel | Himmel und Hölle
+Leben | Das Leben ist kein Ponyhof
