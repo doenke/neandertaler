@@ -75,7 +75,7 @@ Branch.
 - Der Workflow spiegelt **mit Löschen**. Zeigt `SFTP_REMOTE_DIR` versehentlich
   auf ein Verzeichnis mit anderen Inhalten, verschwinden diese. Deshalb ein
   eigenes Unterverzeichnis verwenden; das Wurzelverzeichnis lehnt der Workflow ab.
-- `.git`, `.github`, `.gitignore`, `README.md`, `DEPLOYMENT.md` und `tools/`
+- `.git`, `.github`, `.gitignore`, `README.md`, `DEPLOYMENT.md`, `CLAUDE.md` und `tools/`
   werden nicht übertragen.
 - Der Commit-SHA wird vor dem Upload als Cache-Version in `sw.js` und
   `js/app.js` gestempelt (Platzhalter `__BUILD__`; in den Einstellungen als
