@@ -9,7 +9,7 @@ aus GitHub Actions, siehe [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## Funktionen
 
-- **Karten**: rund 650 eigene Kartenpaare in 14 Kategorien – oben das
+- **Karten**: rund 1950 eigene Kartenpaare in 26 Kategorien – oben das
   1-Punkt-Wort, darunter der 3-Punkt-Begriff. Kategorien lassen sich abwählen.
   Die App merkt sich über Spiele hinweg, welche Karten schon dran waren, und zieht
   zuerst ungespielte. Sind alle durch, wird neu gemischt.

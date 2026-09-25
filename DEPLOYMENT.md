@@ -82,5 +82,5 @@ Branch.
   „Version“ sichtbar). Dadurch erkennen installierte Apps das Update,
   verwerfen den alten Cache und melden „Neue Version verfügbar".
 - Weil ein frischer Checkout alle Zeitstempel auf „jetzt" setzt, lädt lftp
-  jedes Mal alle Dateien neu hoch. Bei rund 150 kB fällt das nicht ins Gewicht.
+  jedes Mal alle Dateien neu hoch. Bei rund 300 kB fällt das nicht ins Gewicht.
 - Zwei Deploys gleichzeitig verhindert die `concurrency`-Gruppe.
