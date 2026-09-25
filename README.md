@@ -33,6 +33,9 @@ aus GitHub Actions, siehe [DEPLOYMENT.md](DEPLOYMENT.md).
 - Spielstand, Einstellungen und gespielte Karten liegen in `localStorage` und
   überstehen Neuladen und Appwechsel. Ein laufender Timer läuft weiter.
 - **Installierbar** als App, komplett offline nutzbar.
+- **Updates** kommen von selbst: Nach einem Deploy erkennt die App die neue
+  Version beim Start oder beim Zurückholen aus dem Hintergrund und bietet
+  „Neu laden“ an.
 
 ## Karten ergänzen
 
@@ -49,7 +52,8 @@ Danach
 python3 tools/build-cards.py
 ```
 
-Das Skript prüft auf doppelte 3-Punkt-Begriffe und kaputte Zeilen und schreibt
+Das Skript prüft auf doppelte 1-Punkt-Wörter, doppelte 3-Punkt-Begriffe
+und kaputte Zeilen und schreibt
 `data/cards.de.json`. Beide Dateien committen. Die ID einer Karte ergibt sich aus
 ihrem Text; wer eine Karte umformuliert, macht daraus für die App eine neue Karte.
 

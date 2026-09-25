@@ -2,7 +2,8 @@
 """Erzeugt data/cards.de.json aus tools/cards.txt.
 
 Aufruf:  python3 tools/build-cards.py
-Bricht ab, wenn ein 3-Punkt-Begriff doppelt vorkommt oder eine Zeile kaputt ist.
+Bricht ab, wenn ein 1-Punkt-Wort oder ein 3-Punkt-Begriff doppelt vorkommt
+oder eine Zeile kaputt ist.
 """
 import hashlib
 import json
@@ -22,6 +23,7 @@ def card_id(one, three):
 def main():
     cards, errors = [], []
     seen_three = {}
+    seen_one = {}
     cat = None
     for no, raw in enumerate(SRC.read_text(encoding="utf-8").splitlines(), 1):
         line = raw.strip()
@@ -44,7 +46,11 @@ def main():
         if key in seen_three:
             errors.append(f"Zeile {no}: '{three}' steht schon in Zeile {seen_three[key]}")
             continue
+        if one.casefold() in seen_one:
+            errors.append(f"Zeile {no}: 1-Punkt-Wort '{one}' steht schon in Zeile {seen_one[one.casefold()]}")
+            continue
         seen_three[key] = no
+        seen_one[one.casefold()] = no
         cards.append({"id": card_id(one, three), "one": one, "three": three, "cat": cat})
 
     if errors:

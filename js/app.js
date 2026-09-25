@@ -573,7 +573,15 @@
 
   if ('serviceWorker' in navigator) {
     const hadController = !!navigator.serviceWorker.controller;
-    window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').then((reg) => {
+        // Eine installierte App bleibt oft tagelang im Hintergrund offen.
+        // Beim Zurückholen deshalb selbst nach einem neuen Deploy fragen.
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'visible') reg.update().catch(() => {});
+        });
+      }).catch(() => {});
+    });
     // Nach einem Deploy übernimmt der neue Service Worker sofort; nur dann,
     // wenn vorher schon einer aktiv war, ist das ein echtes Update.
     navigator.serviceWorker.addEventListener('controllerchange', () => {
