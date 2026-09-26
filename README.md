@@ -37,6 +37,15 @@ aus GitHub Actions, siehe [DEPLOYMENT.md](DEPLOYMENT.md).
   Version beim Start oder beim Zurückholen aus dem Hintergrund und bietet
   „Neu laden“ an.
 
+## Veröffentlichung
+
+- Inoffizielles Fan-Tool; der Startbildschirm weist darauf hin, dass keine
+  Verbindung zum Verlag besteht. Alle Karten sind selbst ausgedacht.
+- Suchmaschinen bleiben draußen: `<meta name="robots" content="noindex">` in
+  `index.html`, `X-Robots-Tag` per `.htaccess` (Apache) und `robots.txt`. Die
+  `robots.txt` wirkt nur im Wurzelverzeichnis der Domain; liegt die App in einem
+  Unterordner, greifen die beiden anderen.
+
 ## Karten ergänzen
 
 Die Karten stehen lesbar in `tools/cards.txt`, eine pro Zeile:

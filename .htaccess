@@ -1,0 +1,5 @@
+# Suchmaschinen fernhalten – gilt auch für JSON, Manifest und Icons.
+# Das IfModule verhindert einen Serverfehler, falls mod_headers fehlt.
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
