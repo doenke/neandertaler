@@ -35,18 +35,7 @@ aus GitHub Actions, siehe [DEPLOYMENT.md](DEPLOYMENT.md).
 - **Installierbar** als App, komplett offline nutzbar.
 - **Updates** kommen von selbst: Nach einem Deploy erkennt die App die neue
   Version beim Start oder beim Zurückholen aus dem Hintergrund und bietet
-  „Neu laden“ an.
-
-## Veröffentlichung
-
-- Inoffizielles Fan-Tool; der Startbildschirm weist darauf hin, dass keine
-  Verbindung zum Verlag besteht. Alle Karten sind selbst ausgedacht.
-- `kontakt.html`: Kontakt und Datenschutzhinweis, vom Startbildschirm verlinkt
-  und offline verfügbar.
-- Suchmaschinen bleiben draußen: `<meta name="robots" content="noindex">` in
-  `index.html`, `X-Robots-Tag` per `.htaccess` (Apache) und `robots.txt`. Die
-  `robots.txt` wirkt nur im Wurzelverzeichnis der Domain; liegt die App in einem
-  Unterordner, greifen die beiden anderen.
+  „Neu laden“ an..
 
 ## Karten ergänzen
 
