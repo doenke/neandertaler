@@ -6,6 +6,7 @@ const SHELL   = `neandertaler-shell-${VERSION}`;
 const SHELL_FILES = [
   './',
   'index.html',
+  'kontakt.html',
   'css/style.css',
   'js/deck.js',
   'js/app.js',
@@ -44,7 +45,7 @@ self.addEventListener('fetch', (event) => {
   if (req.mode === 'navigate') {
     event.respondWith((async () => {
       try { return await fetch(req); }
-      catch { return (await caches.match('index.html')) || Response.error(); }
+      catch { return (await caches.match(req)) || (await caches.match('index.html')) || Response.error(); }
     })());
     return;
   }

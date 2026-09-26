@@ -41,6 +41,8 @@ aus GitHub Actions, siehe [DEPLOYMENT.md](DEPLOYMENT.md).
 
 - Inoffizielles Fan-Tool; der Startbildschirm weist darauf hin, dass keine
   Verbindung zum Verlag besteht. Alle Karten sind selbst ausgedacht.
+- `kontakt.html`: Kontakt und Datenschutzhinweis, vom Startbildschirm verlinkt
+  und offline verfügbar.
 - Suchmaschinen bleiben draußen: `<meta name="robots" content="noindex">` in
   `index.html`, `X-Robots-Tag` per `.htaccess` (Apache) und `robots.txt`. Die
   `robots.txt` wirkt nur im Wurzelverzeichnis der Domain; liegt die App in einem
