@@ -2,8 +2,11 @@
 """Erzeugt data/cards.de.json aus tools/cards.txt.
 
 Aufruf:  python3 tools/build-cards.py
-Bricht ab, wenn ein 1-Punkt-Wort oder ein 3-Punkt-Begriff doppelt vorkommt
-oder eine Zeile kaputt ist.
+Bricht ab, wenn
+- ein 1-Punkt-Wort oder ein 3-Punkt-Begriff doppelt vorkommt,
+- der 3-Punkt-Begriff kein einzelnes zusammengesetztes Wort ist, das das
+  1-Punkt-Wort enthält (Gold → Goldschmied),
+- oder eine Zeile kaputt ist.
 """
 import hashlib
 import json
@@ -18,6 +21,29 @@ DST = ROOT / "data" / "cards.de.json"
 def card_id(one, three):
     # Stabil, solange der Wortlaut gleich bleibt.
     return hashlib.sha1(f"{one}|{three}".encode("utf-8")).hexdigest()[:8]
+
+
+def fold(s):
+    return (s.casefold().replace("ä", "a").replace("ö", "o").replace("ü", "u")
+            .replace("ß", "ss").replace("-", ""))
+
+
+def stems(one):
+    # Fugen und Umlaute: Katze → Katzenklo, Kirsche → Kirschkern, Huhn → Hühnerstall.
+    o = fold(one)
+    result = {o}
+    for suffix in ("en", "e", "n"):
+        if o.endswith(suffix) and len(o) - len(suffix) >= 3:
+            result.add(o[: -len(suffix)])
+    return result
+
+
+def is_compound_of(one, three):
+    """Der 3er ist ein einzelnes zusammengesetztes Wort, das den 1er enthält."""
+    if " " in three:
+        return False
+    t = fold(three)
+    return t != fold(one) and len(t) > len(fold(one)) and any(s in t for s in stems(one))
 
 
 def main():
@@ -48,6 +74,9 @@ def main():
             continue
         if one.casefold() in seen_one:
             errors.append(f"Zeile {no}: 1-Punkt-Wort '{one}' steht schon in Zeile {seen_one[one.casefold()]}")
+            continue
+        if not is_compound_of(one, three):
+            errors.append(f"Zeile {no}: '{three}' ist kein zusammengesetztes Wort mit '{one}'")
             continue
         seen_three[key] = no
         seen_one[one.casefold()] = no

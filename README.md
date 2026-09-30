@@ -9,7 +9,7 @@ aus GitHub Actions, siehe [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## Funktionen
 
-- **Karten**: rund 1950 eigene Kartenpaare in 26 Kategorien – oben das
+- **Karten**: rund 1800 eigene Kartenpaare in 23 Kategorien – oben das
   1-Punkt-Wort, darunter der 3-Punkt-Begriff. Kategorien lassen sich abwählen.
   Die App merkt sich über Spiele hinweg, welche Karten schon dran waren, und zieht
   zuerst ungespielte. Sind alle durch, wird neu gemischt.
@@ -39,21 +39,29 @@ aus GitHub Actions, siehe [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## Karten ergänzen
 
-Die Karten stehen lesbar in `tools/cards.txt`, eine pro Zeile:
+Die Karten stehen lesbar in `tools/cards.txt`, eine pro Zeile. Der
+3-Punkt-Begriff ist immer ein zusammengesetztes Wort, das das 1-Punkt-Wort
+enthält (Gold → Goldschmied):
 
 ```
 ## Tiere
 Hund | Hundehütte
 ```
 
-Danach
+Neue Karten vorab gegen das bestehende Set prüfen:
+
+```bash
+python3 tools/check-new-cards.py neue-karten.txt
+```
+
+Danach die gültigen Zeilen in `tools/cards.txt` übernehmen und
 
 ```bash
 python3 tools/build-cards.py
 ```
 
-Das Skript prüft auf doppelte 1-Punkt-Wörter, doppelte 3-Punkt-Begriffe
-und kaputte Zeilen und schreibt
+Das Skript prüft auf doppelte 1-Punkt-Wörter, doppelte 3-Punkt-Begriffe,
+3-Punkt-Begriffe ohne das 1-Punkt-Wort und kaputte Zeilen und schreibt
 `data/cards.de.json`. Beide Dateien committen. Die ID einer Karte ergibt sich aus
 ihrem Text; wer eine Karte umformuliert, macht daraus für die App eine neue Karte.
 
